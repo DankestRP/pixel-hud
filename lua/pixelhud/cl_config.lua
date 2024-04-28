@@ -1,1 +1,1 @@
-PIXEL.HUD.ServerName = "PIXEL DarkRP"
+PIXEL.HUD.ServerName = "TarnRP"

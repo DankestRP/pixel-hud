@@ -21,7 +21,7 @@ function PIXEL.HUD.SetupOverheadDrawing()
     local stats = {
         { --Name
             imgurId = "6lHN1nU",
-            color = function(ply) return (ply:IsUserGroup("vip") or ply:IsUserGroup("vip+")) and PIXEL.GetRainbowColor() or colors.Name end,
+            color = function(ply) return (ply:IsUserGroup("vip") or ply:IsUserGroup("vip+") or ply:IsUserGroup("vip++") or ply:IsUserGroup("superadmin")) and PIXEL.GetRainbowColor() or colors.Name end,
             getter = function(ply) return ply:Name() end
         },
         { --Job
@@ -29,7 +29,7 @@ function PIXEL.HUD.SetupOverheadDrawing()
             color = function(ply) return team.GetColor(ply:Team()) end,
             getter = function(ply) return team.GetName(ply:Team()) end
         },
-        { --Gang
+     --[[   { --Gang
             imgurId = "sMh3imc",
             color = colors.Gang,
             getter = function(ply)
@@ -44,7 +44,7 @@ function PIXEL.HUD.SetupOverheadDrawing()
                 return gangInfo.Name or "N/A"
             end,
             shouldShow = function(ply) return ply:HasGang() end
-        },
+        },]]--
         { --Health
             imgurId = "TsGKspF",
             color = colors.Health,
